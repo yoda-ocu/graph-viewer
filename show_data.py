@@ -66,9 +66,9 @@ def gui_mode(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='サンプルデータの表示')        
     parser.add_argument('-m', '--mode', help='表示のCUI/GUIの切り替え', choices=['CUI', 'GUI', 'debug'], default='debug')
-    parser.add_argument('--max_rows', help='CUIモードにおける表示する行数', default='7', type=int)
-    parser.add_argument('--max_cols', help='CUIモードにおける表示する列数', default='7', type=int)
-    parser.add_argument('--describe', help="CUIモードに置いて統計量の表示", action='store_false')
+    parser.add_argument('-mr','--max_rows', help='CUIモードにおける表示する行数', default='7', type=int)
+    parser.add_argument('-mc','--max_cols', help='CUIモードにおける表示する列数', default='7', type=int)
+    parser.add_argument('-d','--describe', help="CUIモードに置いて統計量の表示", action='store_false')
     parser.add_argument('-i', '--input', help='表示するファイル', nargs='*')
     
     args = parser.parse_args()
